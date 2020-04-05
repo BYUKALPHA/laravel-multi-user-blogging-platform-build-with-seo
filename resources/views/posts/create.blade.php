@@ -5,7 +5,7 @@
     <div class="card card-default">
         <div class="card-header">Create New Post</div>
         <div class="card-body">
-            <form action="{{route('posts.store')}}" method="POST">
+            <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
                    @csrf
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -17,8 +17,8 @@
                     <textarea name="description" id="description" cols="5" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="content">Content</label>
-                    <textarea name="content" id="content" cols="5" rows="5" class="form-control"></textarea>
+                    <label for="details">Details</label>
+                    <textarea name="details" id="details" cols="5" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="published_at">Published at</label>
