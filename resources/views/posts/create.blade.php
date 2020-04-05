@@ -5,6 +5,14 @@
     <div class="card card-default">
         <div class="card-header">Create New Post</div>
         <div class="card-body">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                        <li class="list-group-item text-danger">
+                            {{$error}}
+                        </li>
+                    @endforeach
+                    @endif
             <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
                    @csrf
                 <div class="form-group">

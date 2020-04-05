@@ -16,8 +16,9 @@
                             {{$error}}
                         </li>
                         @endforeach
+                        @endif
                 </div>
-                @endif
+
             <form action="{{isset($category) ? route('categories.update', $category->id) : route('categories.store')}}" method="POST">
                 @csrf
                 @if(isset($category))
